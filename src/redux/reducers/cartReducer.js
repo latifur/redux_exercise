@@ -25,7 +25,6 @@ export const CartReducer = (state = initialState, action) => {
         };
         state = NewState;
         console.log(state);
-        state.cartItem[0].qty++;
         return state;
       } else {
         const NewState = {
@@ -35,7 +34,6 @@ export const CartReducer = (state = initialState, action) => {
         };
         state = NewState;
         console.log(state);
-        state.cartItem[0].qty++;
         return state;
       }
     }

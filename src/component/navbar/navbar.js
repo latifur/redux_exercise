@@ -17,7 +17,7 @@ const AppNavbar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Link className="navbar-brand" to="/">
-        React-Bootstrap
+        E-shop
       </Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
