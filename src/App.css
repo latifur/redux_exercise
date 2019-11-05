@@ -1,0 +1,20 @@
+.dropdown.nav-item .dropdown-menu {
+  right: 0 !important;
+  left: initial !important;
+  min-width: 300px;
+  overflow: hidden;
+}
+.cart-inner {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.cart-item {
+  position: relative;
+}
+.cart-item .remove_item {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+}
