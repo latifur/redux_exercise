@@ -26,7 +26,7 @@ function AllRooms() {
   };
   const AllRoomsTitles = AllData.map((item, index) => {
     return (
-      <Col sm={3} key={index}>
+      <Col md={3} key={index}>
         <Product
           img={item.fields.images[0].fields.file.url}
           title={item.fields.name}

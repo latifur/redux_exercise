@@ -24,7 +24,7 @@ function AllPhones() {
   };
   const AllPhoneTitles = AllData.map((item, index) => {
     return (
-      <Col sm={3} key={index}>
+      <Col md={3} key={index}>
         <Product
           img={item.img}
           title={item.title}
