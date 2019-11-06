@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Table } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
-import { BUY_PRODUCT, REMOVE_PRODUCT } from "../redux/actions";
+import { BUY_PRODUCT, REMOVE_PRODUCT, CHANGE_QUANTITY } from "../redux/actions";
 
 function CartPage() {
   const ShopCart = useSelector(state => state.Cart);
@@ -11,6 +11,13 @@ function CartPage() {
     const thisSlug = e.target.id;
     dispatch(REMOVE_PRODUCT(thisSlug));
   };
+
+  const ChangeQty = e => {
+    const value = e.target.value;
+    const thisSlug = e.target.id;
+    dispatch(CHANGE_QUANTITY(value, thisSlug));
+  };
+
   if (ShopCart.cartItem.length == 0) {
     return (
       <>
@@ -52,11 +59,42 @@ function CartPage() {
                         src={item.imgUrl}
                         height="80"
                         width="80"
-                        class="img-fluid"
+                        className="img-fluid"
                       />
                     </td>
                     <td>{item.price}</td>
-                    <td>{item.qty}</td>
+                    <td>
+                      <button
+                        onClick={event => ChangeQty(event)}
+                        value="Decrease"
+                        id={item.slug}
+                        className="remove_item btn btn-link"
+                        disabled={item.qty <= 1 ? true : false}
+                      >
+                        -
+                      </button>
+                      {item.qty}
+                      <button
+                        onClick={event => ChangeQty(event)}
+                        value="increase"
+                        id={item.slug}
+                        className="remove_item btn btn-link"
+                        disabled={item.qty >= 5 ? true : false}
+                      >
+                        +
+                      </button>
+                      {item.qty > 4 ? (
+                        <p>
+                          <small>
+                            এত্তগুলা একসাথে অর্ডার করা যাবে না।
+                            <br/> মানিব্যাগ খালি
+                            হবে
+                          </small>
+                        </p>
+                      ) : (
+                        ""
+                      )}
+                    </td>
                     <td>{item.price * item.qty}</td>
                   </tr>
                 );

@@ -15,3 +15,13 @@ export const REMOVE_PRODUCT = slug => {
     }
   };
 };
+
+export const CHANGE_QUANTITY = (changeType, slug) => {
+  return {
+    type: "CHANGE_QUANTITY",
+    payload: {
+      itemSlug: slug,
+      change: changeType
+    }
+  };
+};

@@ -1,8 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { CHANGE_QUANTITY } from "../redux/actions";
 
 function Product(props) {
+  const dispatch = useDispatch();
+  const ChangeQty = e => {
+    const value = e.target.value;
+    const thisSlug = e.target.id;
+    dispatch(CHANGE_QUANTITY(value, thisSlug));
+  };
   return (
     <Card className="mb-3">
       <Card.Img variant="top" src={props.img} />

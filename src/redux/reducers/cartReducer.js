@@ -47,6 +47,32 @@ export const CartReducer = (state = initialState, action) => {
         return state;
       }
     }
+    case "CHANGE_QUANTITY": {
+      const productToRemove = state.cartItem.find(
+        item => item.slug === action.payload.itemSlug
+      );
+
+      if (action.payload.change == "increase") {
+        productToRemove.qty = productToRemove.qty + 1;
+        const NewState = {
+          itemIntoCart: state.itemIntoCart + 1,
+          cartItem: [...state.cartItem],
+          cartTotal: state.cartTotal + productToRemove.price
+        };
+        state = NewState;
+        console.log("product quantity is", productToRemove);
+      } else {
+        productToRemove.qty = productToRemove.qty - 1;
+        const NewState = {
+          itemIntoCart: state.itemIntoCart - 1,
+          cartItem: [...state.cartItem],
+          cartTotal: state.cartTotal - productToRemove.price
+        };
+        state = NewState;
+        console.log("product quantity is", productToRemove);
+      }
+      return state;
+    }
     case "REMOVE_PRODUCT": {
       const removedItem = state.cartItem.filter(
         result => result.slug == action.payload.removedSlug
