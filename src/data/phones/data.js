@@ -24,6 +24,7 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     buyDisabled: true,
+    itemType: "electronics",
     total: 0
   },
   {
@@ -38,6 +39,7 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     buyDisabled: true,
+    itemType: "electronics",
     total: 0
   },
   {
@@ -52,6 +54,7 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     buyDisabled: true,
+    itemType: "electronics",
     total: 0
   },
   {
@@ -66,6 +69,7 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     buyDisabled: true,
+    itemType: "electronics",
     total: 0
   },
   {
@@ -80,6 +84,7 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     buyDisabled: true,
+    itemType: "electronics",
     total: 0
   },
   {
@@ -94,6 +99,7 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     buyDisabled: true,
+    itemType: "electronics",
     total: 0
   },
   {
@@ -108,6 +114,7 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     buyDisabled: true,
+    itemType: "electronics",
     total: 0
   },
   {
@@ -122,6 +129,7 @@ export const storeProducts = [
     inCart: false,
     count: 0,
     buyDisabled: true,
+    itemType: "electronics",
     total: 0
   }
 ];

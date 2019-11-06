@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 
 function Product(props) {
@@ -6,7 +7,9 @@ function Product(props) {
     <Card className="mb-3">
       <Card.Img variant="top" src={props.img} />
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
+        <Card.Title>
+          <Link to={`/details/${props.slug}`}>{props.title}</Link>
+        </Card.Title>
         <div className="d-flex justify-content-between">
           <Card.Text>Price: ${props.price}</Card.Text>
           <Button

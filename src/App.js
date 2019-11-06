@@ -8,6 +8,7 @@ import AppNavbar from "./component/navbar/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/home";
 import CartPage from "./pages/cart";
+import ProductDetails from "./pages/productDetails";
 import "./App.css";
 
 const Error = () => {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/phones" exact component={ShowAllPhones} />
         <Route path="/rooms" exact component={ShowAllRooms} />
         <Route path="/cart" exact component={CartPage} />
+        <Route path="/details/:slug" exact component={ProductDetails} />
         <Route component={Error} />
       </Switch>
     </Provider>

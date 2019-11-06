@@ -42,6 +42,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {
@@ -100,6 +101,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {
@@ -158,6 +160,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {
@@ -216,6 +219,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {
@@ -274,6 +278,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {
@@ -332,6 +337,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {
@@ -390,6 +396,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {
@@ -448,6 +455,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {
@@ -506,6 +514,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {
@@ -564,6 +573,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {
@@ -622,6 +632,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {
@@ -680,6 +691,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {
@@ -738,6 +750,7 @@ const RoomData = [
         "Comfortable beds"
       ],
       buyDisabled: true,
+      itemType: "room",
       images: [
         {
           fields: {

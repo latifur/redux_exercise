@@ -23,7 +23,9 @@ function ProductCart() {
                 </Col>
                 <Col sm={8}>
                   <p>{item.title}</p>
-                  <p>QTY: {item.qty}</p>
+                  <p>
+                    {item.itemType === "room" ? "Day" : "Qty"} : {item.qty}
+                  </p>
                   <p>Price: $ {item.price}</p>
                   <button
                     onClick={event => RemoveItem(event)}

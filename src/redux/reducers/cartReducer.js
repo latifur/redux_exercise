@@ -12,9 +12,18 @@ export const CartReducer = (state = initialState, action) => {
         result => result.slug == action.payload.itemSlug.slug
       );
 
+      const productToAdd = state.cartItem.find(
+        item => item.slug === action.payload.itemSlug.slug
+      );
+
+      if (productToAdd) {
+        productToAdd.qty = productToAdd.qty + 1;
+        console.log("product quantity is", productToAdd.qty);
+      }
+
       // new total price
       const newTotal = action.payload.itemSlug.price;
-      console.log(" product index is ", state.cartItem);
+      console.log(" product index is ", productToAdd);
 
       // if product is already added to cart then only update the cart total not array
       if (PreiousAddedItem.length !== 0) {
@@ -25,6 +34,7 @@ export const CartReducer = (state = initialState, action) => {
         };
         state = NewState;
         console.log(state);
+
         return state;
       } else {
         const NewState = {
@@ -45,15 +55,13 @@ export const CartReducer = (state = initialState, action) => {
         result => result.slug !== action.payload.removedSlug
       );
 
-      const numberOfItem = removedItem.length;
-
       const NewState = {
         itemIntoCart: NewCartItem.length,
         cartItem: NewCartItem,
-        cartTotal: state.cartTotal - removedItem[0].price * numberOfItem
+        cartTotal: state.cartTotal - removedItem[0].price * removedItem[0].qty
       };
       state = NewState;
-      console.log("this item has been removed: ", action.payload.removedSlug);
+      console.log("this item has been removed: ", removedItem);
       return state;
     }
     default: {

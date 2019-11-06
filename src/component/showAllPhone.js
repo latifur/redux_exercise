@@ -18,7 +18,8 @@ function AllPhones() {
       slug: thisCartItem[0].slug,
       imgUrl: thisCartItem[0].img,
       price: thisCartItem[0].price,
-      qty: 1
+      qty: 1,
+      itemType: thisCartItem[0].itemType
     };
     dispatch(BUY_PRODUCT(cartItemInfo));
   };
@@ -33,6 +34,7 @@ function AllPhones() {
           slug={item.slug}
           id={item.slug}
           AddToCart={e => AddToCart(e)}
+          itemType={item.itemType}
         />
       </Col>
     );

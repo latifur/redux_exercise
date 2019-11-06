@@ -20,7 +20,8 @@ function AllRooms() {
       slug: thisCartItem[0].fields.slug,
       imgUrl: thisCartItem[0].fields.images[0].fields.file.url,
       price: thisCartItem[0].fields.price,
-      qty: 1
+      qty: 1,
+      itemType: thisCartItem[0].fields.itemType
     };
     dispatch(BUY_PRODUCT(cartItemInfo));
   };
@@ -35,6 +36,7 @@ function AllRooms() {
           slug={item.fields.slug}
           id={item.fields.slug}
           AddToCart={e => AddToCart(e)}
+          itemType={item.itemType}
         />
       </Col>
     );
