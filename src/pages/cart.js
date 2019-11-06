@@ -28,7 +28,9 @@ function CartPage() {
                 <th>Remove</th>
                 <th>Product Name</th>
                 <th>Product Image</th>
-                <th>Product Price</th>
+                <th>Unit Price</th>
+                <th>Qty</th>
+                <th>Sutotal</th>
               </tr>
             </thead>
             <tbody>
@@ -39,7 +41,7 @@ function CartPage() {
                       <button
                         onClick={event => RemoveItem(event)}
                         id={item.slug}
-                        className="remove_item btn-link"
+                        className="remove_item btn btn-link"
                       >
                         X
                       </button>
@@ -54,12 +56,14 @@ function CartPage() {
                       />
                     </td>
                     <td>{item.price}</td>
+                    <td>{item.qty}</td>
+                    <td>{item.price * item.qty}</td>
                   </tr>
                 );
               })}
             </tbody>
             <tfoot>
-              <td colspan="3" className="text-right">
+              <td colspan="5" className="text-right">
                 <h4>Total</h4>
               </td>
               <td>
