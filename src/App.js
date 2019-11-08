@@ -8,6 +8,7 @@ import AppNavbar from "./component/navbar/navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/home";
 import CartPage from "./pages/cart";
+import Login from "./pages/login";
 import ProductDetails from "./pages/productDetails";
 import "./App.css";
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/rooms" exact component={ShowAllRooms} />
         <Route path="/cart" exact component={CartPage} />
         <Route path="/details/:slug" exact component={ProductDetails} />
+        <Route Path="/login" extract component={Login} />
         <Route component={Error} />
       </Switch>
     </Provider>

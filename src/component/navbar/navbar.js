@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ProductCart from "./cart";
+import Login from "./login";
 import {
   Navbar,
   Nav,
@@ -33,7 +34,9 @@ const AppNavbar = () => {
                 Rooms
               </Link>
             </li>
-
+            <li className="nav-item">
+              <Login />
+            </li>
             <NavDropdown
               title={"Cart" + "(" + Cart.itemIntoCart + ")"}
               id="basic-nav-dropdown"

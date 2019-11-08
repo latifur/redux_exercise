@@ -25,3 +25,19 @@ export const CHANGE_QUANTITY = (changeType, slug) => {
     }
   };
 };
+
+export const LOG_IN = (userName, password) => {
+  return {
+    type: "LOG_IN",
+    payload: {
+      userName: userName,
+      password: password
+    }
+  };
+};
+
+export const LOG_OUT = () => {
+  return {
+    type: "LOG_OUT"
+  };
+};
